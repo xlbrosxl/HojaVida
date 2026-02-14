@@ -127,6 +127,7 @@ body {
     /* Optional Text Gradient */
     background: var(--accent-gradient);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -421,4 +422,104 @@ body {
     height: 1px;
     background: rgba(255, 255, 255, 0.1);
     margin: 10px 0;
+}
+
+/* Comments Section */
+.comments-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comments-section h3 {
+    color: var(--secondary-text);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.comment-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.comment-form input {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--primary-text);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.comment-form input:focus {
+    border-color: var(--accent-purple);
+}
+
+.comment-form button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background: var(--accent-purple);
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.comment-form button:hover {
+    background: #6b46c1;
+}
+
+.comments-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comments-list li {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 3px solid var(--accent-cyan);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.comments-list li span {
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+}
+
+.comments-list li button {
+    background: transparent;
+    border: 1px solid rgba(255, 100, 100, 0.3);
+    color: #ff6b6b;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.2s;
+}
+
+.comments-list li button:hover {
+    background: rgba(255, 100, 100, 0.1);
+    border-color: #ff6b6b;
 }

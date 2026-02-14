@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById("contactModal");
     const btns = document.querySelectorAll(".btn-primary"); // Assuming "Contáctame" buttons share this class or we target specific one
     // Specifically target the "Contáctame" button in hero, or all contact buttons
-    const contactBtns = document.querySelectorAll('a[href^="mailto:"], .btn-primary');
+    const contactBtns = document.querySelectorAll('a[href^="mailto:"], a.btn-primary');
 
     const closeBtn = document.querySelector(".close-btn");
 
@@ -63,4 +63,48 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.style.display = "none";
         }
     }
+
+    // --- Comments Section Logic ---
+    function setupCommentSection(formId, inputId, listId) {
+        const form = document.getElementById(formId);
+        const input = document.getElementById(inputId);
+        const list = document.getElementById(listId);
+
+        if (!form || !input || !list) return;
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const text = input.value.trim();
+            if (text === "") return;
+
+            // Crear elements
+            const li = document.createElement('li');
+            const span = document.createElement('span');
+            const deleteBtn = document.createElement('button');
+
+            span.textContent = text;
+            deleteBtn.textContent = "Borrar";
+
+            // borrar
+            deleteBtn.addEventListener('click', () => {
+                list.removeChild(li);
+            });
+
+            // Assemble list item
+            li.appendChild(span);
+            li.appendChild(deleteBtn);
+
+            // Add to list
+            list.appendChild(li);
+
+            // Clear input
+            input.value = "";
+            input.focus();
+        });
+    }
+
+    setupCommentSection('form-habilidades', 'input-habilidades', 'lista-habilidades');
+    setupCommentSection('form-proyectos', 'input-proyectos', 'lista-proyectos');
+
 });
