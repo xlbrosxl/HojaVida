@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Marin | Portfolio</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#" class="logo">Juan<span>.Dev</span></a>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#formacion">Formación</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero container hidden">
+        <div class="hero-text">
+            <span class="greeting">HOLA, SOY</span>
+            <h1>Juan Esteban <br><span class="highlight">Marin Arciniegas</span></h1>
+            <h2 class="hero-role">Ingeniero de Sistemas</h2>
+            <p class="hero-description">
+                Profesional apasionado por el desarrollo de soluciones tecnológicas innovadoras.
+                Especializado en transformar ideas en realidad digital mediante código limpio y eficiente.
+            </p>
+            <div class="cta-buttons">
+                <a href="mailto:email@example.com" class="btn btn-primary">Contáctame</a>
+                <a href="#proyectos" class="btn btn-secondary">Ver Trabajo</a>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <img src="images.png" alt="Juan Esteban Marin" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Experiencia / Proyectos Section -->
+    <section id="proyectos" class="section container">
+        <h2 class="section-title hidden">Experiencia y Proyectos</h2>
+
+        <div class="grid-container">
+            <!-- Project Card 1 -->
+            <div class="card hidden">
+                <h3>App Móvil "Perla"</h3>
+                <span class="subtitle">Aleph Impresores | Nov 2025 - Presente</span>
+                <p>
+                    Liderazgo y desarrollo integral de una solución multiplataforma para optimizar la toma de tiempos
+                    y medir el rendimiento en planta de producción. Paneles administrativos y métricas en tiempo real.
+                </p>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="card hidden">
+                <h3>AI Governance Evaluator</h3>
+                <span class="subtitle">Universidad Santiago De Cali | Ago 2025 - Dic 2025</span>
+                <p>
+                    Plataforma web innovadora que utiliza IA para evaluar el cumplimiento de normas de gobernanza
+                    de datos y ética en sistemas inteligentes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades Section -->
+    <section id="habilidades" class="section container">
+        <h2 class="section-title hidden">Habilidades Técnicas</h2>
+        <div class="skills-container hidden">
+            <div class="skill-tag">HTML5</div>
+            <div class="skill-tag">CSS3</div>
+            <div class="skill-tag">JavaScript</div>
+            <div class="skill-tag">C# .NET</div>
+            <div class="skill-tag">React.js</div>
+            <div class="skill-tag">React Native</div>
+            <div class="skill-tag">Expo</div>
+            <div class="skill-tag">N8N</div>
+            <div class="skill-tag">Git/GitHub</div>
+        </div>
+    </section>
+
+    <!-- Formación Section -->
+    <section id="formacion" class="section container">
+        <h2 class="section-title hidden">Formación Académica</h2>
+        <div class="grid-container">
+            <div class="card hidden">
+                <h3>Ingeniería de Sistemas</h3>
+                <span class="subtitle">Universidad Santiago De Cali | 2020 - Actualidad</span>
+                <p>Formación integral en desarrollo de software, arquitectura de sistemas y gestión de proyectos
+                    tecnológicos.</p>
+            </div>
+            <div class="card hidden">
+                <h3>Técnico en Diseño Multimedia</h3>
+                <span class="subtitle">Col. Ntra. Sra. de Guadalupe | 2018 - 2020</span>
+                <p>Bases sólidas en diseño gráfico, integración multimedia y experiencia de usuario.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Contáctame</h2>
+            <p>Selecciona un medio para conversar:</p>
+
+            <div class="contact-options">
+                <!-- Email Option -->
+                <div class="contact-item">
+                    <h3>Correo Electrónico</h3>
+                    <a href="mailto:juanesteban24082005@gmail.com" class="contact-link email">
+                        juanesteban24082005@gmail.com
+                    </a>
+                </div>
+
+                <hr class="divider">
+
+                <!-- WhatsApp Options -->
+                <div class="contact-item">
+                    <h3>WhatsApp</h3>
+                    <div class="whatsapp-buttons">
+                        <a href="https://wa.me/573053739265" target="_blank" class="contact-link whatsapp">
+                            Chat (+57 305 373 9265)
+                        </a>
+                        <a href="https://wa.me/573153183950" target="_blank" class="contact-link whatsapp">
+                            Chat (+57 315 531 8395)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
